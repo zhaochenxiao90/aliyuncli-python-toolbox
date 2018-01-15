@@ -1,0 +1,3 @@
+[default]
+output = ${ALI_OUTPUT_FORMAT}
+region = ${ALI_DEFAULT_REGION}
