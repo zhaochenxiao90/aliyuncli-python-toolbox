@@ -1,0 +1,5 @@
+[
+  "http://foo.bar.com/blahl/blah/1",
+  {"url": "http://foo.bar.com/blahl/blah/2"},
+  "http://foo.bar.com/blahl/blah/3/"
+]

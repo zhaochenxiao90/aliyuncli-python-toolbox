@@ -62,14 +62,18 @@ Please refer to the [**acs**](#extensions) directory for more information.
 ## Extensions
 
 The `acs` directory contains a number of scripts that add extra functionality to the CLI as well as have snippets which are useful in day to day operations on Alibaba Cloud.
-Currently, they are grouped into several categories.
+They are roughly grouped into different categories.
 
 ```
 acs/admin/ansible-support.sh         # adds ansible support; read below for more info
 acs/network/vrouter_route_switch.py  # Switches route entries from HAVIP, Instance or RouterInterface and vice versa.
+...
 ```
 
-Most scripts have a help written to what they do and their inputs.
+Most scripts have a help written to what they do and their inputs, e.g.:
+```
+acs/network/vrouter_route_switch.py -h
+```
 
 ## Ansible
 
