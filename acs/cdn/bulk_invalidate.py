@@ -6,8 +6,11 @@ from pprint import pprint
 from urlparse import urlparse
 
 parser = argparse.ArgumentParser(description="""
-Script that invalidates the cache in bulk
+High level script that invalidates the cache in bulk using a CSV or JSON file.
 
+Examples:
+    acs/cdn/bulk_invalidate.py --file acs/cdn/bulk_invalidate_sample.csv 
+    acs/cdn/bulk_invalidate.py --file acs/cdn/bulk_invalidate_sample.json --format json
 """,formatter_class=argparse.RawDescriptionHelpFormatter)
 
 parser.add_argument(
@@ -20,14 +23,11 @@ args = parser.parse_args()
 
 file=args.file
 format=args.format
-items=args.items
+cli = 'aliyuncli'
 
 if format not in ["csv", "json"]:
     print 'Failed: format must be "csv" or "json"'
     exit(1)
-
-sl = float(args.sl)
-cli = 'aliyuncli'
 
 try:
    proc = subprocess.call("{cli}".format(**locals()), stdout=subprocess.PIPE)
