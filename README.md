@@ -62,7 +62,7 @@ Please refer to the [**acs**](#extensions) directory for more information.
 ## Extensions
 
 The `acs` directory contains a number of scripts that add extra functionality to the CLI as well as have snippets which are useful in day to day operations on Alibaba Cloud.
-They are roughly grouped into different categories.
+They tackle typical use cases and can also be used as  reference to chain various tasks related to infrastructure management.
 
 ```
 acs/admin/ansible-support.sh         # adds ansible support; read below for more info
