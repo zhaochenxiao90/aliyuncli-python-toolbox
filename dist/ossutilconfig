@@ -1,0 +1,5 @@
+[Credentials]
+language=${ALI_OSSUTIL_LANG}
+endpoint=${ALI_OSSUTIL_ENDPOINT}
+accessKeyID=${ALI_ACCESS_KEY}
+accessKeySecret=${ALI_ACCESS_SECRET}

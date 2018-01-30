@@ -16,9 +16,14 @@ docker build -t $REPO/$PROJECT-build:$TAG -f $ROOT/build/Dockerfile $ROOT
 build=$(docker run -dti $REPO/$PROJECT-build:$TAG)
 docker cp $build:/all.tgz .
 
+# ossutil
+docker build -t $REPO/$PROJECT-build-oss:$TAG -f $ROOT/oss/Dockerfile $ROOT
+build2=$(docker run -dti $REPO/$PROJECT-build-oss:$TAG sh)
+docker cp $build2:/go/bin/ossutil .
+
 # build the distribution container
 docker build -t $REPO/$PROJECT:$TAG -f $ROOT/dist/Dockerfile $ROOT
-rm all.tgz
-docker stop $build
-docker rm $build
+rm all.tgz ossutil
+docker stop $build $build2
+docker rm $build $build2
 

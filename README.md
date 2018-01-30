@@ -1,6 +1,7 @@
 ## Synopsis
 Enables one to quickly interact with the [Alibaba Cloud APIs](https://www.alibabacloud.com/support/developer-resources) via the [python SDK/aliyun-cli](https://github.com/aliyun/aliyun-cli).
 It frees you from having to set up your own python environments and is perfect for one-shot small tasks, experiments or background jobs of all sorts.
+OSSUtil comes as a bonus.
 
 Note: python 2.7
 
@@ -37,6 +38,9 @@ AssociateHaVip                           | AttachDisk
 
 # get some help regarding the function
 aliyuncli ecs DescribeImages help
+
+# configure ossutil
+ossutil config
 ```
 
 ## Passing credentials
@@ -47,6 +51,10 @@ ALI_ACCESS_KEY
 ALI_ACCESS_SECRET
 ALI_DEFAULT_REGION 
 ALI_OUTPUT_FORMAT
+
+# ossutil
+ALI_OSSUTIL_LANG
+ALI_OSSUTIL_ENDPOINT
 ```
 
 Another way of bootstrapping it is to pass the volume into the container:
