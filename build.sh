@@ -5,7 +5,7 @@ set -euox pipefail
 REPO=${REPO:-"aliyunca"}
 ROOT="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 PROJECT=${PROJECT:-"$(basename $ROOT)"}
-TAG=${TAG:-"latest"};
+TAG=${TAG:-"develop"};
 
 DIR=$ROOT;
 PWD=`pwd`
@@ -27,3 +27,6 @@ rm all.tgz ossutil
 docker stop $build $build2
 docker rm $build $build2
 
+if [[ $1 ]]; then
+   docker push $REPO/$PROJECT:$TAG
+fi
